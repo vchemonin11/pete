@@ -1,0 +1,100 @@
+<html lang="ru">
+<head>
+<style>
+   p {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 3rem; /* Размер шрифта в пунктах */
+     margin-top: 0;
+   }
+   .rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+   }
+   .flip-card {
+     background-color: transparent;
+     width: 640px;
+     height: 480px;
+     border: 1px solid #f1f1f1;
+     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+   }
+
+   /* This container is needed to position the front and back side */
+   .flip-card-inner {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     transition: transform 0.8s;
+     transform-style: preserve-3d;
+     transform: rotateY(180deg);
+   }
+
+   /*!* Do an horizontal flip when you move the mouse over the flip box container *!*/
+   .flip-card:hover .flip-card-inner {
+     transform: rotateY(0deg);
+   }
+
+   /* Position the front and back side */
+   .flip-card-front, .flip-card-back {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     backface-visibility: hidden;
+   }
+
+
+
+   /* Style the front side (fallback if image is missing) */
+   .flip-card-front {
+     /*background-color: #bbb;*/
+     /*color: black;*/
+   }
+
+   /* Style the back side */
+   .flip-card-back {
+     /*background-color: dodgerblue;*/
+     /*color: white;*/
+     vertical-align: center;
+     transform: rotateY(180deg);
+     font-size: 25rem;
+     height: 100%;
+   }
+   body {
+     display: flex;
+     justify-content: space-between;
+   }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22><text y=%22.9em%22 font-size=%2290%22>🤡</text></svg>">
+  <title>Ода Петру</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Ода Петру">
+</head>
+<body>
+<p>
+Все знают Петруччо<br>
+он парень простой<br>
+работает в блумберге<br>
+ходит босой<br>
+<br>
+Откуда же взялся<br> сей господин?<br>
+Ответ тут может быть<br> только один<br>
+<br>
+Тюменская область<br>
+город Надым<br>
+улица Зверева<br>
+сорок один
+
+</p>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/p1.jpg" alt="Петр">
+    </div>
+    <div class="flip-card-back">
+      ?
+    </div>
+  </div>
+</div>
+
+</body>
